@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.utils import datastructures
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.http import HttpResponse, JsonResponse, FileResponse
 from django.shortcuts import render
 from django.conf import settings
@@ -28,5 +28,6 @@ urlpatterns = [
     path('info/', views.info),
     path('shopping/', views.shopping),
     path('lucksoot/', views.lucksoot_pdf),
+    path('chopee/', include('chopee.urls')),
     path('admin/', admin.site.urls),
 ]
