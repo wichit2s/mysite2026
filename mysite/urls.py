@@ -14,12 +14,9 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.utils import datastructures
 from django.contrib import admin
 from django.urls import path, include
-from django.http import HttpResponse, JsonResponse, FileResponse
-from django.shortcuts import render
-from django.conf import settings
+# pyrefly: ignore [missing-import]
 # from .views import *
 from . import views
 
